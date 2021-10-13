@@ -1,2 +1,2 @@
 # beauty-world
-Vyacheslav Bogdnanov
+Vyacheslav Bogdanov
