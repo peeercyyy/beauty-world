@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Мир красоты</title>
-    <link rel="stylesheet" href="./main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="./main.css"> 
 </head>
 <body>
     <div class="wrapper">
@@ -29,49 +29,56 @@
                     <div class="banner__content">
                         <p class="banner__title">Создай свой образ вместе с нами</p>
                             <p class="banner__subtitle">Идеальный образ за 60 минут</p>
-                        <button class="btn banner__btn">Записаться онлайн</button>
+                    </div>
+                    <button class="btn banner__btn">Записаться онлайн</button>
+                    <div class="ellipse">
                         <img class="img banner__img" src="/images/banner_girl.png">
                     </div>
                     <ul class="banner__social">
-                        <li><a href="#"><img src="./images/vk-icon.png" alt="Вконтакте"></a></li>
-                        <li><a href="#"><img src="./images/inst-icon.png" alt="Instagram"></a></li>
-                        <li><a href="#"><img src="./images/youtube-icon.png" alt="Youtube"></a></li>
+                        <li><a href="#" target="_blank"><img src="./images/vk-icon.png" alt="Вконтакте"></a></li>
+                        <li><a href="#" target="_blank"><img src="./images/inst-icon.png" alt="Instagram"></a></li>
+                        <li><a href="#" target="_blank"><img src="./images/youtube-icon.png" alt="Youtube"></a></li>
                     </ul>
                 </div>
             </div>
         </header>
         <main class="main">
-            <div class="container container__main">
+            <div class="container">
                 <section class="about-saloon">
                     <div class="about-saloon__text">
                         <h1 class="about-saloon__title">О салоне</h1>
                         <p class="about-saloon__subtitle">Мир красоты - это уютный салон в самом центре города. Здесь работают профессиональные визажисты, стилисты и мастера татуажа</p>
                         <p class="about-saloon__description">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
                             а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
-                        <a href="#" class="about-saloon__description_expand">Развернуть</a>
+                        <a href="#" class="about-saloon__expand">Развернуть</a>
                     </div>
                         <div class="video-box" style="background-image: url(./images/video-background.png);">
                             <div class="video-box__action">Короткое видео о нас</div>
                         </div>
                 </section>
-                <div class="about-saloon__benefits">
-                    <div class="about-saloon__benefits_cabinets about-cabinets">
-                        <img src="./images/cabinets-icon.png" class="about-cabinets__logo" alt="">
-                        <p class="about-cabinets__title benefits__title">Удобные кабинеты</p>
-                        <p class="about-cabinets__subtitle benefits__subtitle">Комфорт и стиль - принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас</p>
+                <div class="benefits">
+                    <div class="benefits__item">
+                        <div class="benefit__icon">
+                            <img src="./images/cabinets-icon.png">
+                        </div>
+                        <p class="benefits__title">Удобные кабинеты</p>
+                        <p class="benefits__subtitle">Комфорт и стиль - принцип создания <br> кабинетов салона красоты. Только <br> эстетика и удобство для Вас</p>
                     </div>
-                    <div class="about-saloon__benefits_cosmetics about-cosmetics">
-                        <img src="./images/cosmetics-icon.png" alt="" class="about-cosmetics__logo">
-                        <p class="about-cosmetics__title benefits__title">Качественная косметика</p>
-                        <p class="about-cosmetics__subtitle benefits__subtitle">Используем профессиональные материалы высшего качества лучших брендов</p>
+                    <div class="benefits__item">
+                        <div class="benefit__icon">
+                            <img src="./images/cosmetics-icon.png">
+                        </div> 
+                        <p class="benefits__title">Качественная косметика</p>
+                        <p class="benefits__subtitle">Используем профессиональные <br> материалы высшего качества <br> лучших брендов</p>
                     </div>
-                    <div class="about-saloon__benefits_masters about-masters">
-                        <img src="./images/masters-icon.png" alt="" class="about-masters__logo">
-                        <p class="about-masters__title benefits__title">Опытные мастера</p>
-                        <p class="about-masters__subtitle benefits__subtitle">Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера</p>
+                    <div class="benefits__item">
+                        <div class="benefit__icon">
+                            <img src="./images/masters-icon.png">
+                        </div>
+                        <p class="benefits__title">Опытные мастера</p>
+                        <p class="benefits__subtitle">Работают только опытные мастера <br> с чувством стиля. Смотрите наших <br> специалистов в разделе Мастера</p>
                     </div>
                 </div>
-                
             </div>
         </main>
         <footer class="footer">
@@ -79,7 +86,7 @@
                 <div class="footer__items">
                     <div class="footer__items_texts">
                         <p class="edited">© 2020 «Море красоты»</p>
-                        <a href="#" class="confidentional">Политика конфиденциальности</a>
+                        <a href="#" target="_blank" class="confidentional">Политика конфиденциальности</a>
                     </div>
                     <nav class="navigation__footer">
                         <ul>

@@ -58,7 +58,6 @@ button:hover {
     max-width: 1112px;
     margin: auto;
     position: relative;
-    overflow: hidden;
 }
 
 .container__header {
@@ -151,6 +150,10 @@ header {
     padding: 0;
 }
 
+.banner__content {
+    max-width: 486px;
+}
+
 .banner__btn {
     width: 203px;
     height: 48px;
@@ -159,24 +162,29 @@ header {
 
 .banner__img {
     position: absolute;
-    left: 495px;
-    top: -97px;
-    right: 93px;
     z-index: 1;
 }
 
-.container__header:after {
+.ellipse {
+    height: 510px;
+    width: 524px;
+    position: relative;
+    top: -365px;
+    left: 495px;
+    overflow: hidden;
+}
+
+.ellipse:after {
     content: '';
     position: absolute;
+    top: 148px;
+    left: 49px;
     display: inline-block;
     width: 472px;
     height: 472px;
     border-radius: 50%;
     vertical-align: middle;
     background-color: #FB9475;
-    position: absolute;;
-    top: 199px;
-    left: 544px;
     z-index: 0;
 }
 
@@ -193,6 +201,11 @@ header {
 .banner__social li:not(:last-child) {
     margin-bottom: 18px;
 }
+
+.banner__social li:hover {
+    transform: scale(1.1);
+}
+
 
 /* Стили Main */
 
@@ -226,7 +239,7 @@ header {
     line-height: 26px;
 }
 
-.about-saloon__description_expand {
+.about-saloon__expand {
     font-size: 14px;
     color: #278AFF;
 }
@@ -281,14 +294,14 @@ header {
     height: 60px;
 }
 
-.about-saloon__benefits {
+.benefits {
     display: flex;
     justify-content: space-between;
     align-content: center;
     margin-bottom: 100px;
 }
 
-.about-cabinets, .about-cosmetics, .about-masters {
+.benefits__item {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -297,19 +310,12 @@ header {
     height: 176px;
 }
 
-.about-cabinets__logo, .about-cosmetics__logo {
+.benefit__icon {
     height: 48px;
     width: 48px;
-}
-
-.about-masters__logo {
-    height: 48px;
-    width: 43.13px;
-}
-
-.about-cabinets__logo, .about-cosmetics__logo, .about-masters__logo {
     margin-bottom: 28px;
 }
+
 
 .benefits__title {
     font-size: 18px;
