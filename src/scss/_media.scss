@@ -1,0 +1,33 @@
+/* Медиа запросы */
+
+/* Large Devices, Wide Screens */ 
+@media only screen and (max-width: 1280px) { 
+} 
+/* Medium Devices, Desktops */ 
+@media only screen and (max-width: 992px) { 
+    .logo {
+        margin-right: 40px;
+    }
+
+    .navigation ul {
+        justify-content: center;
+    }
+
+    .banner__girl {
+        opacity: 0.5;
+    }
+
+    
+} 
+/* Small Devices, Tablets */ 
+@media only screen and (max-width: 768px) { 
+    .banner__girl {
+        display: none;
+    }
+} 
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 480px) { 
+} 
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width: 320px) { 
+}
