@@ -1,8 +1,5 @@
 /* Медиа запросы */
 
-/* Large Devices, Wide Screens */ 
-@media only screen and (max-width: 1280px) { 
-} 
 /* Medium Devices, Desktops */ 
 @media only screen and (max-width: 992px) { 
     .logo {
@@ -15,19 +12,109 @@
 
     .banner__girl {
         opacity: 0.5;
-    }
-
-    
+    }  
 } 
 /* Small Devices, Tablets */ 
 @media only screen and (max-width: 768px) { 
-    .banner__girl {
+    .hamb  {
+        display: block; 
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        position: fixed;
+    }
+    
+    .logo {
+        padding-left: 40px;
+    }
+
+    .header__nav {
         display: none;
     }
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__social {
+            flex-direction: row;
+            position: relative;
+            & li:not(:last-child) {
+                margin-right: 28px;
+            }
+        }
+
+        &__girl {
+            display: none;
+        }
+    }
+    
 } 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
+    .hamb  {
+        display: block; 
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        position: fixed;
+    }
+    
+    .logo {
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .header {
+        &__top {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        
+        &__nav {
+        display: none;
+        }
+    }
+
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__social {
+            flex-direction: row;
+            position: relative;
+            & li:not(:last-child) {
+                margin-right: 28px;
+            }
+        }
+
+        &__girl {
+            display: none;
+        }
+    }
 } 
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width: 320px) { 
-}
