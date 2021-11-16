@@ -13,15 +13,61 @@
     .banner__girl {
         opacity: 0.5;
     }  
+
+    .about-saloon {
+        display: flex;
+        flex-flow: column wrap;
+
+        &__text {
+            max-width: 100%;
+        }
+    }
+
+    .video-box {
+        max-width: 100%; 
+        margin: auto;
+    } 
+
+    .services {
+        &__hero {
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 0;
+            min-width: 50%;
+        }
+    }
+
+    .price {
+        margin-left: 40px;
+    }
+
 } 
 /* Small Devices, Tablets */ 
 @media only screen and (max-width: 768px) { 
     .hamb  {
-        display: block; 
-        width: 26px;
-        height: 26px;
+        display: inline-block; 
+        width: 35px;
+        margin-top: -3px;
         cursor: pointer;
         position: fixed;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: transparent;
+        padding: 0;
+
+        &__inner {
+            width: 35px;
+            height: 3px;
+            background-color: lighten($color: #000000, $amount: 50%);
+            border-radius: 2px;
+                       
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
     }
     
     .logo {
@@ -62,11 +108,26 @@
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
     .hamb  {
-        display: block; 
-        width: 26px;
-        height: 26px;
+        display: inline-block; 
+        width: 35px;
+        margin-top: -3px;
         cursor: pointer;
         position: fixed;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: transparent;
+        padding: 0;
+
+        &__inner {
+            width: 35px;
+            height: 3px;
+            background-color: lighten($color: #000000, $amount: 50%);
+            border-radius: 2px;
+                       
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
     }
     
     .logo {
