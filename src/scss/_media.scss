@@ -52,11 +52,12 @@
         width: 35px;
         margin-top: -3px;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         background-color: transparent;
         background-repeat: no-repeat;
         border: transparent;
         padding: 0;
+        z-index: 2;
 
         &__inner {
             width: 35px;
@@ -103,7 +104,62 @@
             display: none;
         }
     }
+
+    .about-saloon {
+        &__title, &__subtitle, &__description {
+            text-align: center;
+        }
+    }
+
+    .popular {
+        &__title {
+            text-align: center;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .services {
+        &__title {
+            text-align: center;
+        }
+
+        &__block {
+            flex-grow: 1;
+        }
+    }
     
+    .masters {
+        &__photo {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__title, &__subtitle, &__name, &__speciality, &__experience {
+            text-align: center;
+        }
+    }
+
+    .footer {
+        &__items {
+            flex-direction: column;
+        }
+
+        &__items_texts {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .navigation__footer {
+        justify-content: space-between;
+    }
+
 } 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
@@ -112,11 +168,12 @@
         width: 35px;
         margin-top: -3px;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         background-color: transparent;
         background-repeat: no-repeat;
         border: transparent;
         padding: 0;
+        z-index: 2;
 
         &__inner {
             width: 35px;

@@ -1,5 +1,8 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/normalize.css/normalize.css';
 @import 'vars';
 @import 'common';
+
 
 html,
 body,
@@ -423,7 +426,8 @@ body,
 
 .masters {
     background-color: #F8F6F7;
-    margin: 0 calc(-50vw + 50%);
+    background-size: 100%;
+    margin: 0 ;
 
     &__container {
         padding: 80px 15px;
@@ -436,7 +440,6 @@ body,
     }
 
     &__subtitle {
-        display: inline-block;
         margin-bottom: 24px;
     }
 
@@ -494,6 +497,7 @@ body,
         font-size: 12px;
         font-weight: 300;
         text-transform: uppercase;
+        margin-bottom: 20px;
     }
 }
 
@@ -524,6 +528,7 @@ body,
 .navigation__footer {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     & ul {
         font-size: 12px;
