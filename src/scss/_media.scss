@@ -1,0 +1,238 @@
+/* Медиа запросы */
+
+/* Medium Devices, Desktops */ 
+@media only screen and (max-width: 992px) { 
+    .logo {
+        margin-right: 40px;
+    }
+
+    .navigation ul {
+        justify-content: center;
+    }
+
+    .banner__girl {
+        opacity: 0.5;
+    }  
+
+    .about-saloon {
+        display: flex;
+        flex-flow: column wrap;
+
+        &__text {
+            max-width: 100%;
+        }
+    }
+
+    .video-box {
+        max-width: 100%; 
+        margin: auto;
+    } 
+
+    .services {
+        &__hero {
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 0;
+            min-width: 50%;
+        }
+    }
+
+    .price {
+        margin-left: 40px;
+    }
+
+} 
+/* Small Devices, Tablets */ 
+@media only screen and (max-width: 768px) { 
+    .hamb  {
+        display: inline-block; 
+        width: 35px;
+        margin-top: -3px;
+        cursor: pointer;
+        position: absolute;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: transparent;
+        padding: 0;
+        z-index: 2;
+
+        &__inner {
+            width: 35px;
+            height: 3px;
+            background-color: lighten($color: #000000, $amount: 50%);
+            border-radius: 2px;
+                       
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
+    }
+    
+    .logo {
+        padding-left: 40px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__social {
+            flex-direction: row;
+            position: relative;
+            & li:not(:last-child) {
+                margin-right: 28px;
+            }
+        }
+
+        &__girl {
+            display: none;
+        }
+    }
+
+    .about-saloon {
+        &__title, &__subtitle, &__description {
+            text-align: center;
+        }
+    }
+
+    .popular {
+        &__title {
+            text-align: center;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .services {
+        &__title {
+            text-align: center;
+        }
+
+        &__block {
+            flex-grow: 1;
+        }
+    }
+    
+    .masters {
+        &__photo {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__title, &__subtitle, &__name, &__speciality, &__experience {
+            text-align: center;
+        }
+    }
+
+    .footer {
+        &__items {
+            flex-direction: column;
+        }
+
+        &__items_texts {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .navigation__footer {
+        justify-content: space-between;
+    }
+
+} 
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 480px) { 
+    .hamb  {
+        display: inline-block; 
+        width: 35px;
+        margin-top: -3px;
+        cursor: pointer;
+        position: absolute;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: transparent;
+        padding: 0;
+        z-index: 2;
+
+        &__inner {
+            width: 35px;
+            height: 3px;
+            background-color: lighten($color: #000000, $amount: 50%);
+            border-radius: 2px;
+                       
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
+    }
+    
+    .logo {
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .header {
+        &__top {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        
+        &__nav {
+        display: none;
+        }
+    }
+
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__social {
+            flex-direction: row;
+            position: relative;
+            & li:not(:last-child) {
+                margin-right: 28px;
+            }
+        }
+
+        &__girl {
+            display: none;
+        }
+    }
+} 
