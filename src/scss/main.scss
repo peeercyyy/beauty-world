@@ -2,7 +2,6 @@
 @import '../../node_modules/normalize.css/normalize.css';
 @import 'vars';
 @import 'common';
-@import 'media';
 
 
 html,
@@ -517,7 +516,7 @@ body,
     &__header {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: flex-start;
     }
     
     &__title {
@@ -577,8 +576,8 @@ body,
             font-weight: 500;
             color: #FFF;
             position: relative;
-            top: 188px;
-            left: 128px;
+            top: 55%;
+            left: 38%;
             text-align: center;
             
             &:before {
@@ -605,9 +604,9 @@ body,
     }
 
     &__boxes {
-        min-width: 920px;
-        min-height: 65px;
+        max-height: 65px;
         display: flex;
+        flex-flow:  row wrap;
         justify-content: space-around;
         align-items: baseline;
     }
@@ -628,8 +627,6 @@ body,
 .register {
     background-color: #F8F6F7;
     background-size: 100%;
-    max-height: 486px;
-    height: 100%;
     margin: 0;
    
     &__container {
@@ -786,3 +783,7 @@ body,
         color: #00BF78;
     }
 }
+
+/* Медиа */
+
+@import 'media';
