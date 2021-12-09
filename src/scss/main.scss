@@ -18,6 +18,10 @@ body,
     display: none;
 }
 
+.btn__close-mobile {
+    display: none;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -387,6 +391,10 @@ body,
         font-size: 14px;
         font-weight: 500;
         margin-bottom: 47px;
+
+        & li:hover {
+            cursor: pointer;
+        }
     }
 
     &__selected {
@@ -395,9 +403,13 @@ body,
     }
 
     &__hero {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -63px;
+        display: none;
+        
+        &.active {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -63px;
+        }
     }
 
     &__item {

@@ -110,7 +110,44 @@
     }
 
     .header__nav {
-        display: none;
+        position: fixed;
+        display: flex;
+        left: 0; 
+        right: 0; 
+        top: 0; 
+        bottom: 0; 
+        overflow: auto; 
+        transition: .15s;
+        flex-direction: column;
+        transition: 0.30s;
+        transform: translateX(-100%);
+        background-color: #fff;
+        z-index: 5;
+
+        &.visible {
+            transform: translateX(0); 
+        }
+
+        & ul {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        & li {
+            text-align: center;
+
+            &:not(:last-child) {
+                margin: 0 auto 20px auto;
+            }
+        }
+
+        
+    }
+
+    .btn__close-mobile {
+        display: block;
     }
 
     .banner {
@@ -259,10 +296,6 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 50px;
-        }
-        
-        &__nav {
-        display: none;
         }
     }
 
