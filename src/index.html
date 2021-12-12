@@ -590,22 +590,31 @@
                     <div class="our-works__header container">
                         <h2 class="our-works__title">Наши работы</h2>
                         <div class="our-works__toggles">
-                            <button class="our-works__toggle">
+                            <button class="our-works__toggle btn-prev">
                                 <img src="./images/toggle-left.svg">
                             </button>
-                            <button class="our-works__toggle">
+                            <button class="our-works__toggle btn-next">
                                 <img src="./images/toggle-right.svg">
                             </button>
                         </div>
                     </div>
 
                     <div class="our-works__switch switch__container">
-                        <div class="our-works__cards" style="background-image: url(./images/switch-photo1.png);"></div>
-                        <div class="our-works__cards" style="background-image: url(./images/switch-photo2.png);"></div>
-                        <div class="our-works__cards our-works__cards_active" style="background-image: url(./images/switch-photo3.png);">
-                            <div class="our-works__cards_action">Увеличить</div>
-                        </div>
-                        <div class="our-works__cards" style="background-image: url(./images/switch-photo4.png);"></div>
+                        <a data-fancybox="slider" data-src ="./images/switch-photo1.png" class="our-works__cards" style="background-image: url(./images/switch-photo1.png);">
+                            <p class="our-works__cards_action">Увеличить</p>
+                        </a>
+                        <a data-fancybox="slider" data-src ="./images/switch-photo2.png" class="our-works__cards" style="background-image: url(./images/switch-photo2.png);">
+                            <p class="our-works__cards_action">Увеличить</p>
+                        </a>
+                        <a data-fancybox="slider" data-src ="./images/switch-photo3.png" class="our-works__cards" style="background-image: url(./images/switch-photo3.png);">
+                            <p class="our-works__cards_action">Увеличить</p>
+                        </a>
+                        <a data-fancybox="slider" data-src ="./images/switch-photo4.png" class="our-works__cards" style="background-image: url(./images/switch-photo4.png);">
+                            <p class="our-works__cards_action">Увеличить</p>
+                        </a>
+                        <a data-fancybox="slider" data-src ="./images/switch-photo5.png" class="our-works__cards"style="background-image: url(./images/switch-photo5.png);">
+                            <p class="our-works__cards_action">Увеличить</p>
+                        </a>
                     </div>
 
                 </div>
@@ -684,11 +693,6 @@
             </div>
         </footer>
     </div>
-
-
-    <script src="../../node_modules/jquery/dist/jquery.slim.min.js" type="text/javascript"></script>
-    <script src="../../node_modules/popper.js/dist/popper.min.js" type="text/javascript"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="./js/main.min.js" type="text/javascript"></script>
 </body>
 </html>
