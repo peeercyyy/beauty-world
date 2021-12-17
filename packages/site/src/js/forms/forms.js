@@ -1,5 +1,7 @@
 import ApiService from '../services/api-services.js';
 
+const loader = document.getElementById('loader');
+const success = document.getElementById('success-form');
 export class OrderForm {
     constructor(forms) {
         this.form = forms;
@@ -26,9 +28,20 @@ export class OrderForm {
                     const { name, value } = element;
                     acc[name] = value;
                     return acc;
-                }, {});
+                });
 
             const result = await ApiService.createOrder(new Custumer(data?.name, data?.phone, data?.masterId, data?.serviceId, data?.visitDate));
+        
+            loader.style.display = 'block';
+            
+            if (result === result.ok) {
+            loader.style.display = 'none';
+            success.style.display = 'block';
+            result.setTimeout(() => {
+                success.style.display = 'none';
+            }, 3000);
+            }
+            
 
             forms.reset();
         });

@@ -1,7 +1,9 @@
 import $ from "jquery";
 import 'slick-carousel';
+import 'jquery-validation';
 import {TabsManager} from './tabs.js';
 import {OrderForm} from './forms/forms.js';
+
 
 function init() {
    new TabsManager(document.getElementById('serviceTabs'));
@@ -51,7 +53,26 @@ function init() {
    new OrderForm(document.getElementById('register-form'));
    new OrderForm(document.getElementById('order-form'));
 
-
+   $('#order-form').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			},
+         phone: {
+            required: true,
+         }
+		},
+		messages: {
+			name: {
+				required: "Поле 'Имя' обязательно к заполнению",
+				minlength: "Введите не менее 2-х символов в поле 'Имя'"
+			},
+			phone: {
+				required: "Поле 'Номер телефона' обязательно к заполнению",
+			},
+		}
+	});
 }
 
 
