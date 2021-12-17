@@ -48,14 +48,6 @@ function init() {
    var im = new Inputmask({"mask": "+7 (999) 999-99-99"});
    im.mask(document.querySelectorAll(".form__tel"));
 
-  /*  const expform = document.getElementById('signUpContent');
-   const form = new OrderForm();
-
-   expform.addEventListener('submit', event => {
-		event.preventDefault();
-      form.handleForm();
-   }); */
-   
    new OrderForm(document.getElementById('register-form'));
    new OrderForm(document.getElementById('order-form'));
 

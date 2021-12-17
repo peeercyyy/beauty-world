@@ -9,8 +9,16 @@ module.exports = {
         test: /\.(js)$/,
         exclude: /(node_modules)/,
         loader: 'babel-loader'
-      }
+      },
+      {
+        test: /\.ts$/,
+        use: ['babel-loader', 'ts-loader'],
+        exclude: /node_modules/,
+    },  
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   externals: {
     $: 'jquery',
