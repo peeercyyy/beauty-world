@@ -1,5 +1,8 @@
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../../node_modules/normalize.css/normalize.css';
+@use '../../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../../node_modules/normalize.css/normalize.css';
+@use '../../node_modules/slick-carousel/slick/slick.scss';
+@use '../../node_modules/slick-carousel/slick/slick-theme.css';
+@use '../../node_modules/@fancyapps/ui/dist/fancybox.css';
 @import 'vars';
 @import 'common';
 
@@ -15,6 +18,10 @@ body,
 
 
 .hamb {
+    display: none;
+}
+
+.btn__close-mobile {
     display: none;
 }
 
@@ -387,6 +394,10 @@ body,
         font-size: 14px;
         font-weight: 500;
         margin-bottom: 47px;
+
+        & li:hover {
+            cursor: pointer;
+        }
     }
 
     &__selected {
@@ -395,9 +406,13 @@ body,
     }
 
     &__hero {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -63px;
+        display: none;
+        
+        &.active {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -63px;
+        }
     }
 
     &__item {
@@ -541,10 +556,13 @@ body,
     &__switch {
         display: flex;
         justify-content: space-between;
+        flex: 0 0 auto;
     }
 
     &__cards {
-        width: 338px;
+        width: 100%;
+        max-width: 338px;
+        min-width: 0;
         height: 338px;
         border-radius: 8px;
         background-position: center;
@@ -553,13 +571,10 @@ body,
         overflow: hidden;
         cursor: pointer;
         position: relative;
-        transition: .20s;
+        transition: .30s;
         
-        &:hover, &_action {
-            transform: scale(1.05);
-        }
-
-        &_active::before {
+        &:hover {
+            &::before {
             content: '';
             position: absolute;
             left: 0;
@@ -568,6 +583,7 @@ body,
             bottom: 0;
             background: #000;
             opacity: 50%;
+            }
         }
 
         &_action {

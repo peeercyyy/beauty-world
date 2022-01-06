@@ -6,6 +6,8 @@ const del = require('del');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano'); 
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
 
 // Таск компиляции SASS в CSS
 function buildSass() {
@@ -27,6 +29,16 @@ function buildSass() {
         .pipe(browserSync.stream());
 }
 
+// таск работы с JS
+function buildJs() {
+    return src('src/js/index.js')
+      .pipe(webpackStream(require('./webpack.config')))
+      .pipe(rename('main.min.js'))
+      .pipe(dest('src/js'))
+      .pipe(dest('dist/js'))
+      .pipe(browserSync.stream());
+  }
+  
 // Таск работы с html файлами
 function buildHtml() {
     return src('src/**/*.html')
@@ -34,29 +46,30 @@ function buildHtml() {
         .pipe(browserSync.stream());
 }
 
+// Таск отслеживания изменения файлов
+function serve() {
+    watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
+    watch('src/scss/**/*.scss', buildSass);
+    watch('src/**/*.html', buildHtml);
+  }
+
 // Таск копирования статичных файлов
 function copy() {
-    return src(['src/images/**/*.*'], { base: 'src' }).pipe(dest('dist'));
+    return src(['src/images/**/*.*', 'src/css/**/*.css'], { base: 'src/' }).pipe(dest('dist'));
 }
 
 // Таск очистки dist
 function cleanDist() {
-    return del('dist');
-}
-
-// Таск отслеживания изменения файлов
-function serve() {
-    watch('src/scss/**/*.scss', buildSass);
-    watch('src/**/*.html', buildHtml);
+    return del('dist/**/*', { force: true });
 }
 
 // Создание дев-сервера
-function createDevServer() {
+function browsersync() {
     browserSync.init({
-        server: 'src',
+        server: 'src/',
         notify: false
     })
 }
 
-exports.build = series(cleanDist, buildSass, buildHtml, copy);
-exports.default = series(buildSass, parallel(createDevServer, serve));
+exports.build = series(cleanDist, buildSass, buildJs, buildHtml, copy);
+exports.default = series([buildSass, buildJs], parallel(browsersync, serve));
